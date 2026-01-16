@@ -5,7 +5,7 @@ function Flashcard({ question, answer }) {
 
     return(
         <div
-            onClick={() => setIsFlipped(!isFlipped)}
+            onClick={() => setIsFlipped(!flipped)}
             style={{
                 border: "1px solid #ccc",
                 borderRadius: "8px",
