@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
+  const question = "What is a closure in JavaScript?";
+  const answer = "A closure is a function that retains access to its lexical scope even when the function is executed outside that scope.";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
+      <h1>JavaScript Flashcards</h1>
+      <div 
+        style={{ 
+          border: "1px solid #ccc", 
+          borderRadius: "8px", 
+          padding: "1rem", 
+          maxWidth: "600px" 
+          }}
         >
-          Learn React
-        </a>
-      </header>
+
+          <h2>Question:</h2>
+          <p>{question}</p>
+        
+          <h2>Answer:</h2>
+          <p>{answer}</p>
+          
+      </div>
     </div>
   );
 }
