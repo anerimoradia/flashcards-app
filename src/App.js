@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Flashcard from "./Flashcard";
+import ProgressBar from "./ProgressBar";
 
 function App() {
   const flashcards = [
@@ -23,7 +24,8 @@ function App() {
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
       <h1>JavaScript Flashcards</h1>
-
+      <ProgressBar current={index} total={flashcards.length} />
+      <br />
       <Flashcard 
         question={currentCard.question}
         answer={currentCard.answer}
