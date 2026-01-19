@@ -1,23 +1,19 @@
 function ProgressBar({ current, total }) {
     const percentage = ((current + 1) / total) * 100;
-
+  
     return (
-        <div style ={{
-            width: "100%",
-            height: "20px",
-            background: "#eee",
+      <div style={{ width: "100%", height: "8px", background: "#eee", borderRadius: "5px", marginBottom: "1rem" }}>
+        <div 
+          style={{
+            width: `${percentage}%`,
+            height: "100%",
+            background: "#4caf50",
             borderRadius: "5px",
-            marginTop: "1rem",
-        }}>
-            <div style={{
-                width: `${percentage}%`,
-                height: "100%",
-                background: "blue",
-                borderRadius: "5px",
-            }}
-            ></div>
-        </div>
+            transition: "width 0.3s ease"
+          }}
+        ></div>
+      </div>
     );
-}
-
-export default ProgressBar;
+  }
+  
+  export default ProgressBar;
